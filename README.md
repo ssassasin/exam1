@@ -1,9 +1,11 @@
-This project is for Quiz I of the Spring Semester 2022.
+You are required to clone the repo, work the problem and push changes/updates to your repo with appropriate comments.
 
-You are required to clone the repo, work the problem
-and push changes/updates to your repo with appropriate comments
+Review the instructions in the file .py. Take note of the suggested comments. Please note that not all steps are commented.
 
-You are required to create a virtual environment (VE), activate the virtual environment
-and install the library - Matplotlib
+You are required to create a virtual environment (VE) and name it midtermvenv
 
-Make sure your local and GitHub repos do not contain your VE
+Activate the virtual environment and install the library - scipy
+
+Make sure your GitHub repo DOES NOT contain your virtual environment.
+
+Make sure your Github repo DOES contain your .gitignore file.
