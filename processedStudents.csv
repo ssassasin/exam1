@@ -1,1 +1,5 @@
-stud_id,firstname,lastname,major,classification,gpa
+stud_id,pin,firstname,lastname,city,state,major,classification,gpa
+124567890,2121,bob,norbert,bothell,wa,fin,jr,2.70
+345678901,1141,wally,kendall,seattle,wa,mis,sr,2.80
+789012345,2212,roberto,morales,seattle,wa,fin,jr,2.50
+890123456,2344,luke,brazzi,redmond,wa,mis,sr,2.20

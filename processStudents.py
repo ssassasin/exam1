@@ -29,53 +29,33 @@ through the logic of the problem.
 
 
 import csv
+with open ('students.csv', 'r') as infile, open ('processedStudents.csv', 'w', newline='') as outfile:
+    reader= csv.reader(infile)
+    writer= csv.writer(outfile)
 
+    header= next(reader)
+    writer.writerow(header)
 
-# create a file object to open the file in read mode
+    student_lookup= {}
 
+    for row in reader:
+        try:
+            first_name= row[2] 
+            last_name= row[3] 
+            gpa= float(row[8])
 
+        except (IndexError, ValueError):
+            print(f"Skipping row due to an error: {row}")
+            continue
 
-# create a csv object from the file object
+        full_name= f"{first_name}, {last_name}".title()
+        student_lookup[full_name]= gpa
 
+        if gpa< 3.0:
+            writer.writerow(row)
+            print(f"{full_name} has a GPA of {gpa} below 3.0")
 
-#skip the header row
-
-
-#create an outfile object for the pocessed record
-
-
-
-#create a new dictionary named 'student_dict'
-
-
-
-#use a loop to iterate through each row of the file
-
-
-    #check if the GPA is below 3.0. If so, write the record to the outfile
-    
-        
-
-
-
-    # append the record to the dictionary with the student Full name in proper case 
-    # as the Key and the value as the GPA
-    
-
-
-
-
-
-#print the entire dictionary
-
-
-#Print the corresponding GPA for student 'Luke Brazzi'
-
-
-
-#close the outfile
-
-
+print(student_lookup)
 
 
 
@@ -91,7 +71,8 @@ mask_image = imageio.imread("mask_heart.png")
 wordcloud = WordCloud(colormap="prism", mask=mask_image, background_color="white")
 wordcloud = wordcloud.generate(text)
 wordcloud = wordcloud.to_file("RomeoAndJulietHeart.png")
-plt.imshow(wordcloud)
+plt.imshow(wordcloud, interpolation="bilinear")
+plt.axis("off")
 plt.show()
 
 
